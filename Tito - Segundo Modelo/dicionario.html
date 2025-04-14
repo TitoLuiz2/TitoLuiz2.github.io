@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito Pereira - Fotografia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Imagens/logo-tito.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/Tito%20-%20Segundo%20Modelo/index.html">Principal</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <img src="Imagens/retrato1.jpg" alt="Retrato Tito" class="portrait">
+        <p class="bio">Jornalista independente com olhar atento ao cotidiano, à poesia das ruas e à força das lutas sociais.</p>
+        <div class="social-links">
+            <p>
+                <img src="Imagens/instagram.svg" alt="Instagram" class="icon">
+                <a href="https://www.instagram.com/contadotito/" target="_blank">Instagram</a>
+            </p>
+            <p>
+                <img src="Imagens/banlek.svg" alt="Banlek" class="icon">
+                <a href="https://banlek.com/titolp" target="_blank">Banlek</a>
+            </p>
+            <p>
+                <img src="Imagens/twitter.svg" alt="Twitter" class="icon">
+                <a href="https://x.com/titolp" target="_blank">Twitter</a>
+            </p>
+            <p>
+                <img src="Imagens/500px.svg" alt="500px" class="icon">
+                <a href="https://500px.com/p/contadotito?view=photos" target="_blank">500px</a>
+            </p>
+        </div>
+    </aside>
+    
+
+    <main>
+        <section id="sobre" class="sobre-section">
+            
+            <div>
+                <h2>Tags Html</h2>
+                <p>!DOCTYPE html – Diz que o documento é HTML.</p>
+<p>html – Começa o código HTML.</p>
+
+<p>head – Parte que guarda informações do site (não aparece na página).</p>
+
+<p>meta – Dá detalhes técnicos (como idioma e codificação).</p>
+
+<p>title – Define o nome que aparece na aba do navegador.</p>
+
+<p>link – Liga arquivos externos (como CSS).</p>
+
+<p>body – "Corpo" do site, todo o conteúdo vai aqui.</p>
+
+<p>div – Caixa genérica para organizar conteúdo.</p>
+
+<p>span – Pequena parte de texto ou conteúdo.</p>
+
+<p>img – Mostra uma imagem.</p>
+
+<p>header – Cabeçalho da página (geralmente o topo).</p>
+
+<p>nav – Menu de navegação.</p>
+
+<p>ul – Lista de itens.</p>
+
+<p>li – Cada item da lista.</p>
+
+<p>a – Link para outro lugar.</p>
+
+<p>aside – Conteúdo lateral (como uma bio).</p>
+
+<p>p – Parágrafo de texto.</p>
+
+<p>main – Parte principal do conteúdo.</p>
+
+<p>section – Uma parte do conteúdo (tipo capítulo).</p>
+
+<p>h – Título (vai de h1 a h5).</p>
+
+            </div>
+        </section>
+
+
+
+
+
+
+        <section id="contato" class="centered-section">
+            <h2>Contato</h2>
+            <address>
+                Tito Luiz Pereira<br>
+                Florianópolis - SC<br>
+                Email: <a href="mailto:titolp@gmail.com">titolp@gmail.com</a>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tito Pereira. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+
+        document.querySelectorAll('.galeria a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                lightboxImg.src = link.href;
+                lightbox.style.display = 'block';
+            });
+        });
+
+        closeBtn.onclick = () => {
+            lightbox.style.display = 'none';
+        };
+
+        lightbox.onclick = e => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
